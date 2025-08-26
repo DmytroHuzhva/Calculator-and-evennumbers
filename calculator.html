@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Calculator | Calculator, even </title>
+{% endblock %}
+{% block body %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div class="window3" align="center">
+        <h2 class="tit_cal">Calculator</h2>
+        <form method="post">
+            <input placeholder="Input number and action (+ or - or ...) AND SPACES BETWEEN" name="inp_calculator" type="text" class="inp_calculator">
+            <br>
+            <br>
+            <button>Submit!</button>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, msg in messages %}
+                        <p class="alert alert-{{ category }}">{{ msg }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </form>
+    </div>
+{% endblock %}

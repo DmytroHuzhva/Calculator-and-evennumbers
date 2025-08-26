@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu | Calculator, even</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    {% block head %} {% endblock %}
+</head>
+<body>
+    <div class="hotbar" align="center">
+        <a href="{{ url_for('even') }}">
+            even
+        </a>
+        <br>
+        <a href="{{ url_for('calculator') }}">
+            calculator
+        </a>
+        <br>
+        <a href="{{ url_for('home') }}">
+            menu
+        </a>
+    </div>
+    {% block body %} {% endblock %}
+</body>
+</html>

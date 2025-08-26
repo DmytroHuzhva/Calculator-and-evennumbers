@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="window2" align="center">
+    <h3>Even-numbers</h3>
+    <form method="POST">
+        <input type="text" name="even" placeholder="Input your number!" class="inp_even">
+        <br>
+        <br>
+        <button type="submit">Submit!</button>
+        <br>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, msg in messages %}
+                    <p class="alert alert-{{ category }}">{{ msg }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </form>
+</div>
+{% endblock %}
